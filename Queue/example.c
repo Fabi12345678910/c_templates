@@ -1,3 +1,5 @@
+/* Disclosure: The code provided herein contains a code template
+that was derived from the repository "Fabi12345678910/c_templates." */
 #include <stdio.h>
 
 

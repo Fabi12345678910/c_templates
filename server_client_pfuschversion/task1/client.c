@@ -1,3 +1,5 @@
+/* Disclosure: The code provided herein contains a code template
+that was derived from the repository "Fabi12345678910/c_templates." */
 #define _POSIX_C_SOURCE 200809L
 
 #include <netinet/in.h>
@@ -10,6 +12,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <stdint.h>
+
 
 #define MSG_SIZE 128
 

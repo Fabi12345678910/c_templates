@@ -1,5 +1,5 @@
-//this file is based on my template for a simple client server connection,
-//    which is based on exercise09/task2
+/* Disclosure: The code provided herein contains a code template
+that was derived from the repository "Fabi12345678910/c_templates." */
 #define _POSIX_C_SOURCE 200809L
 #include "common.h"
 
