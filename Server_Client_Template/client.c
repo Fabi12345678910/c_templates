@@ -60,11 +60,12 @@ int main(int argc, char const *argv[])
 
     uint16_t port;
     char *end;
-    port = (uint16_t) strtol(argv[1], &end, 10);
-    if (*end != '\0'){
+    long input_port = strtol(argv[1], &end, 10);
+    if (*end != '\0' || input_port < 0 || input_port > UINT16_MAX){
         fprintf(stderr, "error decoding port\n");
         return EXIT_FAILURE;
     }
+    port = (uint16_t) input_port;
 
     return client(port);
 }
