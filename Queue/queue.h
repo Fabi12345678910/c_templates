@@ -5,6 +5,10 @@
     #define MYQUEUE_TYPE int
 #endif
 
+#ifndef MYQUEUE_MISSING_RETURN_VALUE
+    #define MYQUEUE_MISSING_RETURN_VALUE 0
+#endif
+
 struct myqueue_node{
     MYQUEUE_TYPE value;
     struct myqueue_node *next;
@@ -20,6 +24,7 @@ typedef struct myqueue_head{
 
 //available Methods to outsiders
 //set MYQUEUE_TYPE makro to a preferred data type
+//also set MYQUEUE_MISSING_RETURN_VALUE if default (0) is not working
 
 void myqueue_init(myqueue* q);
 
@@ -55,7 +60,8 @@ void myqueue_enqueue(myqueue* q, MYQUEUE_TYPE value) {
 MYQUEUE_TYPE myqueue_dequeue(myqueue* q) {
 	if(myqueue_is_empty(q)) {
 		// error
-		return 0;
+		MYQUEUE_TYPE error = MYQUEUE_MISSING_RETURN_VALUE;
+        return error;
 	}
 	struct myqueue_node* oldest_node = q->head;
 	MYQUEUE_TYPE ret_val = oldest_node->value;
