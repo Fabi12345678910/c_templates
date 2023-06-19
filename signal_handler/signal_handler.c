@@ -1,6 +1,3 @@
-#define _POSIX_C_SOURCE
-#define _DEFAULT_SOURCE
-//#define _BSD_SOURCE if compiled on zid
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
